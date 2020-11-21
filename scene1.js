@@ -4,7 +4,9 @@ class Scene1 extends Phaser.Scene {
     }
   
     preload(){
-      
+      game.scale.pageAlignHorizontally = true;
+      game.scale.pageAlignVertically = true;
+      game.scale.refresh();
     }
   
     create() {
