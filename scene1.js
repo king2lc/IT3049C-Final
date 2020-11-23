@@ -13,7 +13,7 @@ class Scene1 extends Phaser.Scene {
     }
     create() {
       var windowWidth = window.innerWidth;
-      var widnowHeight = window.innerHeight;
+      var windowHeight = window.innerHeight;
       this.bg = this.add.image(windowWidth / 2, windowHeight / 2, 'background');
       this.bg.setDisplaySize(windowWidth, windowHeight);
     }
