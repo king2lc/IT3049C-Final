@@ -24,13 +24,13 @@ class Scene1 extends Phaser.Scene {
 
     }
     create() {
+      this.scene.start("playGame");
+
       var windowWidth = window.innerWidth;
       var windowHeight = window.innerHeight;
       this.bg = this.add.image(windowWidth / 2, windowHeight / 2, 'background');
       this.bg.setDisplaySize(windowWidth, windowHeight);
-
-      this.scene.start("playGame");
-
+      
       this.anims.create({
         key: "ship1_anim",
         frames: this.game.anims.generateFrameNumbers("ship"),
