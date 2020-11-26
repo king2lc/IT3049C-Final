@@ -10,9 +10,9 @@ class Scene2 extends Phaser.Scene {
 
       this.ship = this.add.sprite(this.game.config.width/2 - 50, this.game.config.height/2, "ship");
 
-      this.ship.play("ship1_anim");
+      this.ship1.play("ship1_anim");
 
-      this.ship.setInteractive();
+      this.ship1.setInteractive();
     }
   
     update() {
