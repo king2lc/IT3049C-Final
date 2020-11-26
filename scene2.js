@@ -8,13 +8,12 @@ class Scene2 extends Phaser.Scene {
       this.background = this.add.tileSprite(0,0,this.game.config.width, this.game.config.height, "background");
       this.background.setOrigin(0,0);
 
-      this.ship = this.add.sprite(this.game.config.width/2 - 50, this.game.config.height/2, "ship");
+      this.ship = this.add.sprite(this.game.config.width/2 - 50, this.game.config.height/2, "ship1");
     }
   
     update() {
 
       this.moveShip(this.ship1, 1);
-  
   
       this.background.tilePositionY -= 0.5;
   
@@ -37,10 +36,10 @@ class Scene2 extends Phaser.Scene {
   }
   
       //Moving the ship on Y axis
-      moveShip(ship, speed){
-          ship.y += speed;
-          if(ship.y > this.game.config.height){
-              this.resetShipPos(ship);
+      moveShip(ship1, speed){
+          ship1.y += speed;
+          if(ship1.y > this.game.config.height){
+              this.resetShipPos(ship1);
           }
       }
 

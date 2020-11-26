@@ -30,10 +30,10 @@ class Scene1 extends Phaser.Scene {
       var windowHeight = window.innerHeight;
       this.bg = this.add.image(windowWidth / 2, windowHeight / 2, 'background');
       this.bg.setDisplaySize(windowWidth, windowHeight);
-      
+
       this.anims.create({
         key: "ship1_anim",
-        frames: this.game.anims.generateFrameNumbers("ship"),
+        frames: this.game.anims.generateFrameNumbers("ship1"),
         frameRate: 20,
         repeat: -1
     });
