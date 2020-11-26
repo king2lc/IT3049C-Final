@@ -1,7 +1,3 @@
-var gameSettings = {
-    playerSpeed: 200
-}
-
 var config = {
     width: 1280,
     height: 720,
