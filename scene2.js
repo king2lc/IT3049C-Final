@@ -31,12 +31,12 @@ class Scene2 extends Phaser.Scene {
             this.resetMeteorPos(meteor);
           }
           this.meteor.angle += speed;
-        }
+        };
         
         resetMeteorPos(meteor) {
           meteor.x = config.width;
           var randomX = Phaser.Math.Between(0, config.height);
-        }
+        };
     }
   
     update() {
