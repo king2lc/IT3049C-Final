@@ -8,7 +8,7 @@ class Scene1 extends Phaser.Scene {
 
         this.load.image('test', 'Assets/Asteroids, Meteors/filled/Stones2Filled_01.png');
 
-        this.load.image('player', 'Assets/!!!ASSETSINNUSE!!!/ShipOrig_0003_Package-----------------.png');
+        this.load.image('player', 'Assets/!!!ASSETSINUSE!!!/ShipOrig_0003_Package-----------------.png');
         
         this.load.spritesheet("ship", "Assets/!!!ASSETSINUSE!!!/Pro.png",{
             frameWidth: 16,
