@@ -19,8 +19,6 @@ class Scene1 extends Phaser.Scene {
       this.bg = this.add.image(windowWidth / 2, windowHeight / 2, 'background');
       this.bg.setDisplaySize(windowWidth, windowHeight);
       this.player = this.physics.add.sprite(100, 100, 'player');
-      this.arrow = this.input.keyboard.createCursorKeys();
-
     }
   }
   
