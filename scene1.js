@@ -6,7 +6,7 @@ class Scene1 extends Phaser.Scene {
     preload(){
         this.load.image('background', 'Assets/!!!ASSETSINUSE!!!/bg9.png');
 
-        this.load.image('player', 'Assets/!!!ASSETSNUSE!!!/player.png');
+        this.load.image('player', 'Assets/!!!ASSETSNUSE!!!/ShipOrig_0003_Package-----------------.png');
         
         this.load.spritesheet("ship", "Assets/!!!ASSETSINUSE!!!/Pro.png",{
             frameWidth: 16,
