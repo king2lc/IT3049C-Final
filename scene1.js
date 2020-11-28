@@ -32,6 +32,8 @@ class Scene1 extends Phaser.Scene {
             duration: 30000
         });
         console.log(tween);
+
+        this.player = this.add.sprite(config.width / 2, config.height / 2, "player");
     }
   }
   
