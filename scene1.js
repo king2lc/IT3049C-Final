@@ -15,16 +15,16 @@ class Scene1 extends Phaser.Scene {
         
 
         this.load.image("meteor1", "Assets/!!!ASSETSINUSE!!!/Stone1.png",{
-          frameWidth: 16,
-          frameHeight: 16
+          frameWidth: 100,
+          frameHeight: 100
         });
         this.load.image("meteor2", "Assets/!!!ASSETSINUSE!!!/Stone2.png",{
-          frameWidth: 16,
-          frameHeight: 16
+          frameWidth: 100,
+          frameHeight: 100
         });
         this.load.image("meteor3", "Assets/!!!ASSETSINUSE!!!/Stone3.png",{
-          frameWidth: 16,
-          frameHeight: 16
+          frameWidth: 100,
+          frameHeight: 100
         });
 
     }
