@@ -22,21 +22,8 @@ class Scene2 extends Phaser.Scene {
             duration: 30000
         });
         console.log(tween);
+      
 
-        moveMeteor(meteor, speed) {
-          var randomDeltaY = Phaser.Math.Between(-speed, speed);
-          meteor.x -= speed;
-          meteor.y += randomDeltaY;
-          if (meteor.y < 0) {
-            this.resetMeteorPos(meteor);
-          }
-          this.meteor.angle += speed;
-        };
-        
-        resetMeteorPos(meteor) {
-          meteor.x = config.width;
-          var randomX = Phaser.Math.Between(0, config.height);
-        };
     }
   
     update() {
@@ -46,4 +33,5 @@ class Scene2 extends Phaser.Scene {
     }
   
   }
+
   
