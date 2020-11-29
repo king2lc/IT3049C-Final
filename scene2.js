@@ -9,8 +9,10 @@ class Scene2 extends Phaser.Scene {
       var windowWidth = window.innerWidth;
       var windowHeight = window.innerHeight;
       //this.add.image() adds the image 
-      this.bg = this.add.image(windowWidth / 2, windowHeight / 2, 'background');
-      this.bg.setDisplaySize(windowWidth, windowHeight);
+      this.bg = this.add.tileSprite(0, 0, this.game.config.width, this.game.config.height, 'background');
+      this.bg.setOrigin(0, 0);
+      
+      //These add the images into our game
       this.player = this.add.sprite(config.width / 2, config.height / 2, "player");
       this.meteor1 = this.add.image(config.width / 2, config.height/2 - 100, "meteor1");
       this.meteor2 = this.add.image(config.width / 2, config.height/2, "meteor2");
@@ -28,12 +30,14 @@ class Scene2 extends Phaser.Scene {
 
     }
 
+    //This resets the meteor position
     resetMeteorPos(meteor) {
       meteor.x = config.width;
       var randomY = Phaser.Math.Between(0, config.height);
       meteor.y = randomY;      
     }
 
+    //This function moves the metor
     moveMeteor(meteor, speed) {
       var randomDeltaY = Phaser.Math.Between(-speed, speed);
       meteor.x -= speed;
@@ -43,11 +47,13 @@ class Scene2 extends Phaser.Scene {
       }
     }
   
-    //THis function is used as a loop that runs constantly
+    //This function is used as a loop that runs constantly
     update() {
       this.moveMeteor(this.meteor1, 10);
       this.moveMeteor(this.meteor2, 20);
       this.moveMeteor(this.meteor3, 15);
+
+      this.bg.tilePositionY -=0.5;
     }
   
   }
