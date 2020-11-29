@@ -25,9 +25,7 @@ class Scene2 extends Phaser.Scene {
     }
   
     update() {
-      this.moveMeteor(this.meteor1, 1);
-      this.moveMeteor(this.meteor2, 2);
-      this.moveMeteor(this.meteor3, 3);
+
     }
   
   }
