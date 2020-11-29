@@ -11,7 +11,7 @@ class Scene2 extends Phaser.Scene {
       //this.add.image() adds the image 
       this.bg = this.add.image(windowWidth / 2, windowHeight / 2, 'background');
       this.bg.setDisplaySize(windowWidth, windowHeight);
-      var image = this.add.image(100, 100, 'test');
+      var image = this.add.image(0, config.height / 2, 'earth');
       player = this.physics.add.image(config.width / 2, config.height / 2, "player");
       this.meteor1 = this.add.image(config.width, config.height/2 - 150, "meteor1");
       this.meteor2 = this.add.image(config.width, config.height/2 - 50, "meteor2");
@@ -20,7 +20,7 @@ class Scene2 extends Phaser.Scene {
 
         var tween = this.tweens.add({
             targets: image,
-            x: 600,
+            x: config.width + 100,
             duration: 30000
         });
         console.log(tween);

@@ -13,7 +13,7 @@ class Scene1 extends Phaser.Scene {
       //this.load.image() loads the images into Scene
         this.load.image('background', 'Assets/!!!ASSETSINUSE!!!/bg9.png');
 
-        this.load.image('test', 'Assets/Asteroids, Meteors/filled/Stones2Filled_01.png');
+        this.load.image('earth', 'Assets/!!!ASSETSINUSE!!!/Earth.png');
 
         this.load.image('player', 'Assets/!!!ASSETSINUSE!!!/player.png',{
           frameWidth: 100,
