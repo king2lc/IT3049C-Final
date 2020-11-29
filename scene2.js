@@ -12,9 +12,10 @@ class Scene2 extends Phaser.Scene {
       this.bg = this.add.image(windowWidth / 2, windowHeight / 2, 'background');
       this.bg.setDisplaySize(windowWidth, windowHeight);
       this.player = this.add.sprite(config.width / 2, config.height / 2, "player");
-      this.meteor1 = this.add.image(config.width / 2, config.height/2 - 100, "meteor1");
-      this.meteor2 = this.add.image(config.width / 2, config.height/2, "meteor2");
-      this.meteor3 = this.add.image(config.width / 2, config.height/2 + 100, "meteor3");
+      this.meteor1 = this.add.image(config.width, config.height/2 - 150, "meteor1");
+      this.meteor2 = this.add.image(config.width, config.height/2 - 50, "meteor2");
+      this.meteor3 = this.add.image(config.width, config.height/2 + 50, "meteor3");
+      this.meteor4 = this.add.image(config.width, config.height/2 + 150, "meteor4");      
 
       var image = this.add.image(100, 100, 'test');
 
@@ -46,9 +47,10 @@ class Scene2 extends Phaser.Scene {
   
     //THis function is used as a loop that runs constantly
     update() {
-      this.moveMeteor(this.meteor1, 0.3, -1);
-      this.moveMeteor(this.meteor2, 1, 2);
-      this.moveMeteor(this.meteor3, 0.5, 1);
+      this.moveMeteor(this.meteor1, 1.6, -0.6);
+      this.moveMeteor(this.meteor2, 1.2, -0.1);
+      this.moveMeteor(this.meteor3, 1.1, 0.2);
+      this.moveMeteor(this.meteor4, 1.5, 0.4);
     }
   
   }
