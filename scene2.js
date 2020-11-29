@@ -10,9 +10,7 @@ class Scene2 extends Phaser.Scene {
       this.bg = this.add.image(windowWidth / 2, windowHeight / 2, 'background');
       this.bg.setDisplaySize(windowWidth, windowHeight);
       this.player = this.add.sprite(config.width / 2, config.height / 2, "player");
-      this.meteor1 = this.add.image(config.width, config.height/2 - 100, "meteor1");
-      this.meteor2 = this.add.image(config.width, config.height/2, "meteor2");
-      this.meteor3 = this.add.image(config.width, config.height/2 + 100, "meteor3");
+
 
       var image = this.add.image(100, 100, 'test');
 
