@@ -20,7 +20,10 @@ class Scene1 extends Phaser.Scene {
         frameHeight: 100
       });
         
-
+      this.load.image("earth", "Assets/!!!ASSETSINUSE!!!/Earth.png",{
+        frameWidth: 500,
+        frameHeight: 500
+      });
         this.load.image("meteor1", "Assets/!!!ASSETSINUSE!!!/Stone1.png",{
           frameWidth: 100,
           frameHeight: 100
@@ -30,6 +33,10 @@ class Scene1 extends Phaser.Scene {
           frameHeight: 100
         });
         this.load.image("meteor3", "Assets/!!!ASSETSINUSE!!!/Stone3.png",{
+          frameWidth: 100,
+          frameHeight: 100
+        });
+        this.load.image("meteor4", "Assets/!!!ASSETSINUSE!!!/Stone4.png",{
           frameWidth: 100,
           frameHeight: 100
         });
