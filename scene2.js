@@ -1,12 +1,14 @@
+//Same thing as Scene1 and the will let us play the game
 class Scene2 extends Phaser.Scene {
     constructor() {
       super("playGame");
-  
     }
   
+    //This function is used to add objects to the game
     create() {
       var windowWidth = window.innerWidth;
       var windowHeight = window.innerHeight;
+      //this.add.image() adds the image 
       this.bg = this.add.image(windowWidth / 2, windowHeight / 2, 'background');
       this.bg.setDisplaySize(windowWidth, windowHeight);
       this.player = this.add.sprite(config.width / 2, config.height / 2, "player");
@@ -41,6 +43,7 @@ class Scene2 extends Phaser.Scene {
       }
     }
   
+    //THis function is used as a loop that runs constantly
     update() {
       this.moveMeteor(this.meteor1, 10);
       this.moveMeteor(this.meteor2, 20);
