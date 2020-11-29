@@ -8,10 +8,7 @@ var config = {
     scene: [Scene1, Scene2],
     pixelArt: true,
     physics: {
-        default: 'arcade',
-        arcade: {
-            debug: true
-        }
+        default: 'arcade'
     },
 }
 
