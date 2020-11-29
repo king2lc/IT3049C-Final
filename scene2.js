@@ -46,9 +46,9 @@ class Scene2 extends Phaser.Scene {
   
     //THis function is used as a loop that runs constantly
     update() {
-      this.moveMeteor(this.meteor1, 3, -1);
-      this.moveMeteor(this.meteor2, 5, 2);
-      this.moveMeteor(this.meteor3, 8, 1);
+      this.moveMeteor(this.meteor1, 0.3, -1);
+      this.moveMeteor(this.meteor2, 1, 2);
+      this.moveMeteor(this.meteor3, 0.5, 1);
     }
   
   }
