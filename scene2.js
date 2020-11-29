@@ -26,7 +26,7 @@ class Scene2 extends Phaser.Scene {
         console.log(tween);
       player.setCollideWorldBounds(true);
       cursors = this.input.keyboard.createCursorKeys();
-
+        player.angle = 90;
     }
 
     resetMeteorPos(meteor) {
