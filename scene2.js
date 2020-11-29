@@ -28,23 +28,24 @@ class Scene2 extends Phaser.Scene {
 
     resetMeteorPos(meteor) {
       meteor.x = config.width;
-      var randomY = Phaser.Math.Between(0, config.height);
+      var randomY = Phaser.Math.Between(100, config.height - 100);
       meteor.y = randomY;      
     }
 
-    moveMeteor(meteor, speed) {
+    moveMeteor(meteor, speed, direction) {
       var randomDeltaY = Phaser.Math.Between(-speed, speed);
       meteor.x -= speed;
-      meteor.y += randomDeltaY;
+      meteor.y += direction
       if (meteor.x < 0) {
         this.resetMeteorPos(meteor);
       }
+      meteor.angle -= direction/2;
     }
   
     update() {
-      this.moveMeteor(this.meteor1, 10);
-      this.moveMeteor(this.meteor2, 20);
-      this.moveMeteor(this.meteor3, 15);
+      this.moveMeteor(this.meteor1, 3, -1);
+      this.moveMeteor(this.meteor2, 5, 2);
+      this.moveMeteor(this.meteor3, 8, 1);
     }
   
   }
