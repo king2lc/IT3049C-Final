@@ -7,7 +7,18 @@ var config = {
     //This specifies the configuration of the game with the scenes
     scene: [Scene1, Scene2],
     pixelArt: true,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            debug: true
+        }
+    },
 }
+
+
+var cursors;
+var player;
+
 
 //Here we are creating a new game instance that we can configure when creating it
 var game = new Phaser.Game(config)

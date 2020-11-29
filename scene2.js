@@ -12,7 +12,7 @@ class Scene2 extends Phaser.Scene {
       this.bg = this.add.image(windowWidth / 2, windowHeight / 2, 'background');
       this.bg.setDisplaySize(windowWidth, windowHeight);
       var image = this.add.image(100, 100, 'test');
-      this.player = this.add.sprite(config.width / 2, config.height / 2, "player");
+      player = this.physics.add.image(config.width / 2, config.height / 2, "player");
       this.meteor1 = this.add.image(config.width, config.height/2 - 150, "meteor1");
       this.meteor2 = this.add.image(config.width, config.height/2 - 50, "meteor2");
       this.meteor3 = this.add.image(config.width, config.height/2 + 50, "meteor3");
@@ -24,7 +24,8 @@ class Scene2 extends Phaser.Scene {
             duration: 30000
         });
         console.log(tween);
-      
+      player.setCollideWorldBounds(true);
+      cursors = this.input.keyboard.createCursorKeys();
 
     }
 
@@ -50,6 +51,26 @@ class Scene2 extends Phaser.Scene {
       this.moveMeteor(this.meteor2, 1.2, -0.4);
       this.moveMeteor(this.meteor3, 1.1, 0.2);
       this.moveMeteor(this.meteor4, 1.5, 0.4);
+    
+        player.setVelocity(0);
+
+    if (cursors.left.isDown)
+    {
+        player.setVelocityX(-300);
+    }
+    else if (cursors.right.isDown)
+    {
+        player.setVelocityX(300);
+    }
+
+    if (cursors.up.isDown)
+    {
+        player.setVelocityY(-300);
+    }
+    else if (cursors.down.isDown)
+    {
+        player.setVelocityY(300);
+    }
     }
   
   }
