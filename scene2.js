@@ -12,19 +12,22 @@ class Scene2 extends Phaser.Scene {
       this.bg = this.add.tileSprite(0, 0, this.game.config.width, this.game.config.height, 'background');
       this.bg.setOrigin(0, 0);
 
-      var image = this.add.image(-500, config.height / 2, 'earth');
+      var earth = this.add.image(-500, 100, 'earth');
+        
       player = this.physics.add.image(config.width / 2, config.height / 2, "player");
+        
       this.meteor1 = this.add.image(config.width, config.height/2 - 150, "meteor1");
       this.meteor2 = this.add.image(config.width, config.height/2 - 50, "meteor2");
       this.meteor3 = this.add.image(config.width, config.height/2 + 50, "meteor3");
       this.meteor4 = this.add.image(config.width, config.height/2 + 150, "meteor4");      
 
         var tween = this.tweens.add({
-            targets: image,
-            x: config.width + 100,
-            duration: 30000
+            targets: earth,
+            x: 3000,
+            duration: 100000
         });
         console.log(tween);
+        
       player.setCollideWorldBounds(true);
       cursors = this.input.keyboard.createCursorKeys();
         player.angle = 90;
