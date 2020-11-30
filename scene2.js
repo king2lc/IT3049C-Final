@@ -31,7 +31,11 @@ class Scene2 extends Phaser.Scene {
       player.setCollideWorldBounds(true);
       cursors = this.input.keyboard.createCursorKeys();
         player.angle = 90;
-
+        
+        //Detetcs collision between our player and top-most meteor to show how it works.
+         this.physics.add.collider(player, this.meteor1, () => {
+      this.scene.restart();
+    })
     }
 
     resetMeteorPos(meteor) {
