@@ -9,7 +9,7 @@ class Scene2 extends Phaser.Scene {
       var windowWidth = window.innerWidth;
       var windowHeight = window.innerHeight;
       //this.add.image() adds the image 
-      this.bg = this.add.image(0,0, this.game.config.width, this.game.config.height, 'background');
+      this.bg = this.add.tileSprite(0, 0, this.game.config.width, this.game.config.height, 'background');
       this.bg.setOrigin(0, 0);
 
       var image = this.add.image(-500, config.height / 2, 'earth');
