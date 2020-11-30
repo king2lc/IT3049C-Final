@@ -13,14 +13,16 @@ class Scene1 extends Phaser.Scene {
       //this.load.image() loads the images into Scene
         this.load.image('background', 'Assets/!!!ASSETSINUSE!!!/bg9.png');
 
-      this.load.image('player', 'Assets/!!!ASSETSINUSE!!!/player.png',{
+        this.load.image('test', 'Assets/Asteroids, Meteors/filled/Stones2Filled_01.png');
+
+      this.load.spritesheet('player', 'Assets/!!!ASSETSINUSE!!!/player.png',{
         frameWidth: 100,
         frameHeight: 100
       });
         
       this.load.image("earth", "Assets/!!!ASSETSINUSE!!!/Earth.png",{
-        frameWidth: 100,
-        frameHeight: 100
+        frameWidth: 500,
+        frameHeight: 500
       });
         this.load.image("meteor1", "Assets/!!!ASSETSINUSE!!!/Stone1.png",{
           frameWidth: 100,
@@ -38,6 +40,19 @@ class Scene1 extends Phaser.Scene {
           frameWidth: 100,
           frameHeight: 100
         });
+
+        this.load.spritesheet("explosion", "Assets/!!!ASSETSINUSE!!!/explosion.png",{
+          frameWidth: 100,
+          frameHeight: 100
+        });
+
+        this.anims.create({
+          key: "explode",
+          frames: this.game.anims.generateFrameNumbers("explosion"),
+          frameRate: 20,
+          repeat: 0,
+          hideOnComplete: true
+      });
 
     }
 
