@@ -52,6 +52,8 @@ class Scene2 extends Phaser.Scene {
       this.moveMeteor(this.meteor2, 1.2, -0.4);
       this.moveMeteor(this.meteor3, 1.1, 0.2);
       this.moveMeteor(this.meteor4, 1.5, 0.4);
+
+      this.bg.tilePositionY -= 0.5;
     
         player.setVelocity(0);
 
