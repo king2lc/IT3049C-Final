@@ -41,12 +41,16 @@ class Scene1 extends Phaser.Scene {
           frameHeight: 100
         });
 
+        //this.load.audio('music', 'Assets/!!!ASSETSINUSE!!!/Music.mp3');
+
     }
 
     //This function is used to add objects to the game
     create() {
 
       //This jumps us to Scene2
+    this.add.text(200, 200, "Loading...");
+
         this.scene.start("playGame");
 
     }
