@@ -16,10 +16,10 @@ class Scene2 extends Phaser.Scene {
         
       player = this.physics.add.image(config.width / 2, config.height / 2, "player");
         
-      this.meteor1 = this.add.image(config.width, config.height/2 - 150, "meteor1");
-      this.meteor2 = this.add.image(config.width, config.height/2 - 50, "meteor2");
-      this.meteor3 = this.add.image(config.width, config.height/2 + 50, "meteor3");
-      this.meteor4 = this.add.image(config.width, config.height/2 + 150, "meteor4");      
+      this.meteor1 = this.physics.add.image(config.width, config.height/2 - 150, "meteor1");
+      this.meteor2 = this.physics.add.image(config.width, config.height/2 - 50, "meteor2");
+      this.meteor3 = this.physics.add.image(config.width, config.height/2 + 50, "meteor3");
+      this.meteor4 = this.physics.add.image(config.width, config.height/2 + 150, "meteor4");      
 
         var tween = this.tweens.add({
             targets: earth,
@@ -77,6 +77,7 @@ class Scene2 extends Phaser.Scene {
     {
         player.setVelocityY(300);
     }
+
     }
   
   }
