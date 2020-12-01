@@ -12,9 +12,11 @@ class Scene2 extends Phaser.Scene {
       this.bg = this.add.tileSprite(0, 0, this.game.config.width, this.game.config.height, 'background');
       this.bg.setOrigin(0, 0);
 
-      var earth = this.add.image(-500, 100, 'earth');
+      var earth = this.add.image(-50, 100, 'earth');
+        earth.setScale(.35);
         
       player = this.physics.add.image(config.width / 2, config.height / 2, "player");
+        player.setScale(.75);
         
       this.meteor1 = this.physics.add.image(config.width, config.height/2 - 150, "meteor1");
       this.meteor2 = this.physics.add.image(config.width, config.height/2 - 50, "meteor2");
@@ -23,8 +25,8 @@ class Scene2 extends Phaser.Scene {
 
         var tween = this.tweens.add({
             targets: earth,
-            x: 3000,
-            duration: 100000
+            x: 1500,
+            duration: 150000
         });
         console.log(tween);
         
