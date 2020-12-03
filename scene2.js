@@ -40,18 +40,6 @@ class Scene2 extends Phaser.Scene {
         });
         console.log(tween);
 
-        this.music = this.sound.add("music");
-
-    var musicConfig = {
-      mute: false,
-      volume: 0.1,
-      rate: 1,
-      detune: 0,
-      loop: false,
-      delay: 0
-    }
-
-    this.music.play(musicConfig);
         
       player.setCollideWorldBounds(true);
       cursors = this.input.keyboard.createCursorKeys();
@@ -96,10 +84,10 @@ class Scene2 extends Phaser.Scene {
   
     //THis function is used as a loop that runs constantly
     update() {
-      this.moveMeteor(this.meteor1, 1.6, -0.6);
-      this.moveMeteor(this.meteor2, 1.2, -0.4);
-      this.moveMeteor(this.meteor3, 1.1, 0.2);
-      this.moveMeteor(this.meteor4, 1.5, 0.4);
+      this.moveMeteor(this.meteor1, 2, -1);
+      this.moveMeteor(this.meteor2, 1.8, -0.8);
+      this.moveMeteor(this.meteor3, 1.6, 0.6);
+      this.moveMeteor(this.meteor4, 1.9, 0.9);
 
       this.bg.tilePositionY -= 0.5;
     
