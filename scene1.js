@@ -44,8 +44,6 @@ class Scene1 extends Phaser.Scene {
           frameHeight: 100
         });
 
-        this.load.audio("music", "Assets/!!!ASSETSINUSE!!!/Music.mp3");
-
     }
 
     //This function is used to add objects to the game
