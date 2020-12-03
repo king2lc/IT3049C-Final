@@ -39,7 +39,7 @@ class Scene1 extends Phaser.Scene {
           frameHeight: 100
         });
 
-        //this.load.audio('music', 'Assets/!!!ASSETSINUSE!!!/Music.mp3');
+        this.load.audio("music", "Assets/!!!ASSETSINUSE!!!/Music.mp3");
 
     }
 

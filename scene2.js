@@ -55,6 +55,16 @@ class Scene2 extends Phaser.Scene {
     this.physics.add.collider(player, this.meteor4, () => {
       this.scene.restart();
     })
+
+    this.music = this.sound.add("music");
+
+    var musicConfig = {
+      mute: false,
+      loop: true
+    }
+
+    this.music.play(musicConfig);
+
     }
 
     resetMeteorPos(meteor) {
