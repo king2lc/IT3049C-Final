@@ -47,7 +47,7 @@ class Scene2 extends Phaser.Scene {
       volume: 0.1,
       rate: 1,
       detune: 0,
-      loop: true,
+      loop: false,
       delay: 0
     }
 
