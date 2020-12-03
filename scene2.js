@@ -39,6 +39,19 @@ class Scene2 extends Phaser.Scene {
             duration: 150000
         });
         console.log(tween);
+
+        this.music = this.sound.add("music");
+
+    var musicConfig = {
+      mute: false,
+      volume: 0.1,
+      rate: 1,
+      detune: 0,
+      loop: true,
+      delay: 0
+    }
+
+    this.music.play(musicConfig);
         
       player.setCollideWorldBounds(true);
       cursors = this.input.keyboard.createCursorKeys();
@@ -57,19 +70,6 @@ class Scene2 extends Phaser.Scene {
     this.physics.add.collider(player, this.meteor4, () => {
       this.scene.restart();
     })
-
-    this.music = this.sound.add("music");
-
-    var musicConfig = {
-      mute: false,
-      volume: 0.5,
-      rate: 1,
-      detune: 0,
-      loop: true,
-      delay: 0
-    }
-
-    this.music.play(musicConfig);
 
     }
 
