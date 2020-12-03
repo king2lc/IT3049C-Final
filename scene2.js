@@ -38,6 +38,15 @@ class Scene2 extends Phaser.Scene {
          this.physics.add.collider(player, this.meteor1, () => {
       this.scene.restart();
     })
+    this.physics.add.collider(player, this.meteor2, () => {
+      this.scene.restart();
+    })
+    this.physics.add.collider(player, this.meteor3, () => {
+      this.scene.restart();
+    })
+    this.physics.add.collider(player, this.meteor4, () => {
+      this.scene.restart();
+    })
     }
 
     resetMeteorPos(meteor) {
