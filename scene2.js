@@ -61,7 +61,10 @@ class Scene2 extends Phaser.Scene {
     var musicConfig = {
       mute: false,
       volume: 0.5,
-      loop: true
+      rate: 1,
+      detune: 0,
+      loop: true,
+      delay: 0
     }
 
     this.music.play(musicConfig);
