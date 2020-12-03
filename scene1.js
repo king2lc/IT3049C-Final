@@ -17,11 +17,6 @@ class Scene1 extends Phaser.Scene {
         frameWidth: 100,
         frameHeight: 100
       });
-        
-      this.load.spritesheet("explosion", "assets/spritesheets/explosion.png", {
-        frameWidth: 16,
-        frameHeight: 16
-    });
 
       this.load.image("earth", "Assets/!!!ASSETSINUSE!!!/Earth.png",{
         frameWidth: 100,
@@ -53,14 +48,6 @@ class Scene1 extends Phaser.Scene {
     this.add.text(200, 200, "Loading...");
 
         this.scene.start("playGame");
-
-        this.anims.create({
-          key: "explode",
-          frames: this.game.anims.generateFrameNumbers("explosion"),
-          frameRate: 20,
-          repeat: 0,
-          hideOnComplete: true
-      });
 
     }
   }

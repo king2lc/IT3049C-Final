@@ -31,8 +31,6 @@ class Scene2 extends Phaser.Scene {
       this.meteor4 = this.physics.add.image(config.width, config.height/2 + 150, "meteor4");
       this.meteor4.setSize(100,100,true);
 
-      this.input.on('gameobjectdown', this.destroyShip, this);
-
         var tween = this.tweens.add({
             targets: earth,
             x: -100,
@@ -75,11 +73,6 @@ class Scene2 extends Phaser.Scene {
         this.resetMeteorPos(meteor);
       }
       meteor.angle -= direction/2;
-    }
-
-    destroyShip(pointer, gameObject) {
-      gameObject.setTexture("explosion");
-      gameObject.play("explode");
     }
   
     //THis function is used as a loop that runs constantly
