@@ -31,7 +31,7 @@ class Scene2 extends Phaser.Scene {
       this.meteor4 = this.physics.add.image(config.width, config.height/2 + 150, "meteor4");
       this.meteor4.setSize(100,100,true);
 
-      this.input.on('gameobjectdown', this.destroyShip, this);
+      this.input.on('player', this.destroyShip, this);
 
         var tween = this.tweens.add({
             targets: earth,
@@ -39,7 +39,6 @@ class Scene2 extends Phaser.Scene {
             duration: 150000
         });
         console.log(tween);
-
         
       player.setCollideWorldBounds(true);
       cursors = this.input.keyboard.createCursorKeys();
@@ -59,6 +58,16 @@ class Scene2 extends Phaser.Scene {
       this.scene.restart();
     })
 
+    this.music = this.sound.add("music");
+
+    var musicConfig = {
+      mute: false,
+      volume: 0.5,
+      loop: true
+    }
+
+    this.music.play(musicConfig);
+
     }
 
     resetMeteorPos(meteor) {
@@ -77,17 +86,17 @@ class Scene2 extends Phaser.Scene {
       meteor.angle -= direction/2;
     }
 
-    destroyShip(pointer, gameObject) {
-      gameObject.setTexture("explosion");
-      gameObject.play("explode");
+    destroyShip(collider, player) {
+      player.setTexture("explosion");
+      player.play("explode");
     }
   
     //THis function is used as a loop that runs constantly
     update() {
-      this.moveMeteor(this.meteor1, 2, -1);
-      this.moveMeteor(this.meteor2, 1.8, -0.8);
-      this.moveMeteor(this.meteor3, 1.6, 0.6);
-      this.moveMeteor(this.meteor4, 1.9, 0.9);
+      this.moveMeteor(this.meteor1, 1.6, -0.6);
+      this.moveMeteor(this.meteor2, 1.2, -0.4);
+      this.moveMeteor(this.meteor3, 1.1, 0.2);
+      this.moveMeteor(this.meteor4, 1.5, 0.4);
 
       this.bg.tilePositionY -= 0.5;
     
