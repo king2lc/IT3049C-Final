@@ -17,7 +17,8 @@ class Scene2 extends Phaser.Scene {
         
       player = this.physics.add.image(config.width / 2, config.height / 2, "player");
         player.setScale(.75);
-        
+        player.setSize(150, 150, true);
+
       this.meteor1 = this.physics.add.image(config.width, config.height/2 - 150, "meteor1");
       this.meteor1.setSize(100,100,true);
 
@@ -26,7 +27,7 @@ class Scene2 extends Phaser.Scene {
 
       this.meteor3 = this.physics.add.image(config.width, config.height/2 + 50, "meteor3");
       this.meteor3.setSize(100,100,true);
-      
+
       this.meteor4 = this.physics.add.image(config.width, config.height/2 + 150, "meteor4");
       this.meteor4.setSize(100,100,true);
 
